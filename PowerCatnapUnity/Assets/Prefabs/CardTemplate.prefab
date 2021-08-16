@@ -191,7 +191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2496569528900994185}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1.6, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2496569529558070174}
@@ -296,3 +296,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 2496569527959614109}
+  allCardData:
+  - {fileID: 11400000, guid: 59487752444b347488c004a65010df27, type: 2}
+  - {fileID: 11400000, guid: 1358a834d52ea9040ba4cc12483bd076, type: 2}

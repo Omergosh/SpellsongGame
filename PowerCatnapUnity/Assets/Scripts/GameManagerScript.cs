@@ -12,9 +12,18 @@ public enum CardType
 public class GameManagerScript : MonoBehaviour
 {
 
+    // Resources
+    public GameObject cardPrefab;
+    public GameObject glyphPrefab;
+
+    // Card-related nonsense
     List<CardType> deck = new List<CardType>();
     public List<CardType> hand = new List<CardType>();
     public int handSize = 5;
+
+    // Display objects/variables
+    public List<GameObject> cardHandDisplay = new List<GameObject>();
+    public float handSeparationMargin = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,12 +50,54 @@ public class GameManagerScript : MonoBehaviour
         {
             Debug.Log(card);
         }
+
+        InitializeCardDisplay();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateCardDisplay();
+    }
+
+    void InitializeCardDisplay()
+    {
+        cardHandDisplay = new List<GameObject>(handSize);
+        for (int i = 0; i < cardHandDisplay.Capacity; i++)
+        {
+            cardHandDisplay.Add(Instantiate(cardPrefab));
+        }
+        UpdateCardDisplay();
+    }
+
+    void UpdateCardDisplay()
+    {
+        for (int i = 0; i < cardHandDisplay.Capacity; i++)
+        {
+            if (i < hand.Count)
+            {
+                cardHandDisplay[i].SetActive(true);
+                SetCardDisplay(cardHandDisplay[i], hand[i]);
+
+                cardHandDisplay[i].transform.position = new Vector3(
+                    ((-0.5f * handSeparationMargin) * (hand.Count - 1))
+                        + (i * handSeparationMargin),
+                    //-3f + (1f * handSeparationMargin * i),
+                    -3f,
+                    0
+                    );
+            }
+            else
+            {
+                cardHandDisplay[i].SetActive(false);
+            }
+        }
+    }
+
+    void SetCardDisplay(GameObject cardDisplayGameObject, CardType cardType)
+    {
+        CardDisplayScript cardScript = cardDisplayGameObject.GetComponent<CardDisplayScript>();
+        cardScript.SetCard(cardType);
     }
 
     public void ShuffleDeck()

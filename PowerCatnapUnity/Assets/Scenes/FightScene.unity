@@ -249,8 +249,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969a70c154796124789dacc9509bdb59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardPrefab: {fileID: 2496569529558070145, guid: fe0d4f0fd326ef7459de1ba5e91eb13e, type: 3}
+  glyphPrefab: {fileID: 6095381070697706121, guid: 8092479e6f850944aa253e33945858fc, type: 3}
   hand: 
   handSize: 5
+  cardHandDisplay: []
+  handSeparationMargin: 2
 --- !u!1 &2018642757
 GameObject:
   m_ObjectHideFlags: 0

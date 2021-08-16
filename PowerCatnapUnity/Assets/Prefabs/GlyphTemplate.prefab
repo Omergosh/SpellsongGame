@@ -49,6 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glyphSprite: {fileID: 6095381072295768981}
+  allGlyphData:
+  - {fileID: 11400000, guid: 17c5842b7a8204c4cbf6b44ba5f174c1, type: 2}
+  - {fileID: 11400000, guid: 777971fcdcb3ee340aa1a799ee07bd7e, type: 2}
 --- !u!1 &6095381071764923075
 GameObject:
   m_ObjectHideFlags: 0
