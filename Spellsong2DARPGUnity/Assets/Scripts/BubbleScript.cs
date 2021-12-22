@@ -15,10 +15,13 @@ public class BubbleScript : MonoBehaviour
 
     public AttackData attackData;
 
+    public Animation animation;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        animation = GetComponent<Animation>();
         if (target != null)
         {
             targetVector = target.position;
@@ -76,10 +79,19 @@ public class BubbleScript : MonoBehaviour
 
     void StartDestroyingSelf()
     {
-        gameObject.SetActive(false);
-        Destroy(gameObject, 0.5f);
+        animation.Play("BubbleExplode");
+
+        // ------OLD APPROACH------
+        //gameObject.SetActive(false);
+        //Destroy(gameObject, 0.5f);
         // Bubble's GameObject is invisible and inactive, but still present in the Scene
         // for half a second after the impact.
         // Use this time for VFX/SFX stuff for the first implementation (until it's refactored to work less jank).
+    }
+
+    void FinishDestroyingSelf()
+    {
+        gameObject.SetActive(false);
+        Destroy(gameObject, 0.5f);
     }
 }
