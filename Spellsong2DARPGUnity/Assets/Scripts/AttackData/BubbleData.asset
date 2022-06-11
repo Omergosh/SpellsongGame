@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Bubble
   attackType: WATER
   damage: 3
-  hitstunToApply: 10
+  hitstunToApply: 100
   canBeDeflected: 1
   canBeParried: 1
   canBeBlocked: 1

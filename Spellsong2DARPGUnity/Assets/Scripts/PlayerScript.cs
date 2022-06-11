@@ -13,6 +13,8 @@ public enum PlayerState
     CHARGING,
     ATTACKING
 }
+
+[RequireComponent(typeof(CombatantScript))]
 public class PlayerScript : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;

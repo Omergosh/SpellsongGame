@@ -365,6 +365,7 @@ MonoBehaviour:
   startAimedAtTarget: 0
   aimedAtTarget: 0
   attackData: {fileID: 11400000, guid: 587d883df70d28148923a64f90d00d08, type: 2}
+  animation: {fileID: 0}
 --- !u!1 &833608504
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +488,7 @@ GameObject:
   - component: {fileID: 854195983}
   - component: {fileID: 854195984}
   - component: {fileID: 854195985}
+  - component: {fileID: 854195986}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -622,6 +624,26 @@ MonoBehaviour:
   hitstunRemaining: 0
   neutralColor: {r: 0.43529415, g: 0.8313726, b: 0.7176471, a: 1}
   hitstunColor: {r: 0.8396226, g: 0.24951048, b: 0.24951048, a: 1}
+--- !u!114 &854195986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854195980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64dd38f2e387fe4088c323386f38aac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControlled: 0
+  inputMovement: {x: 0, y: 0}
+  health: 100
+  currentState: 0
+  moveForce: 10
+  dashForce: 20
+  rigidbody: {fileID: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &1221682571
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +684,7 @@ MonoBehaviour:
   startAimedAtTarget: 0
   aimedAtTarget: 0
   attackData: {fileID: 11400000, guid: 587d883df70d28148923a64f90d00d08, type: 2}
+  animation: {fileID: 0}
 --- !u!111 &1221682573
 Animation:
   m_ObjectHideFlags: 0
